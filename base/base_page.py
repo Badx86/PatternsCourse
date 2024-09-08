@@ -1,5 +1,6 @@
 from metaclasses.meta_locator import MetaLocator
 from selenium.webdriver.chrome.webdriver import WebDriver
+import allure
 
 
 class BasePage(metaclass=MetaLocator):
@@ -8,5 +9,6 @@ class BasePage(metaclass=MetaLocator):
         self.driver: WebDriver = driver
 
     def open(self):
-        self.driver.get(self._PAGE_URL)
+        with allure.step(f"Open page: {self._PAGE_URL}"):
+            self.driver.get(self._PAGE_URL)
 

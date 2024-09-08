@@ -14,5 +14,5 @@ class MetaLocator(type):
                     # преобразуем строку в локатор, если она начинается с '.' или '#' CSS Selector
                     attrs[key] = ("css selector", value)
 
-                return type.__new__(cls, name, bases, attrs)
+        return type.__new__(cls, name, bases, attrs)
 
