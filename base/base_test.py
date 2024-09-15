@@ -1,10 +1,9 @@
-from pages.login_page import LoginPage
-from pages.dashboard_page import DashboardPage
+from pages.contacts_page import ContactsPage
+from pages.companies_page import CompaniesPage
 
 
 class BaseTest:
 
     def setup_method(self):
-        self.login_page = LoginPage(self.driver)
-        self.dashboard_page = DashboardPage(self.driver)
-
+        self.contacts_page = ContactsPage(self.driver)
+        self.comapnies_page = CompaniesPage(self.driver)
