@@ -15,5 +15,4 @@ class Credentials:
         PASSWORD = os.getenv("QA_PASSWORD")
 
 
-print(Credentials.LOGIN)
-print(Credentials.PASSWORD)
+

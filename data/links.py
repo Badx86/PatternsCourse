@@ -3,11 +3,6 @@ import os
 
 # $env:STAGE="dev"; python data/links.py
 class Links:
-    HOST = f"https://{os.environ['STAGE']}-crm.qa-playground.com/#"
+    HOST = f"https://opensource-demo.orangehrmlive.com/web"
 
-    CONTACTS_PAGE = f"{HOST}/contacts"
-    COMPANIES_PAGE = f"{HOST}/companies"
-
-
-print(Links.CONTACTS_PAGE)
-print(Links.COMPANIES_PAGE)
+    LOGIN_PAGE = f"{HOST}/index.php/auth/login"
