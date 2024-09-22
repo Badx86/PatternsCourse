@@ -1,17 +1,11 @@
 import time
-import allure
-import pytest
 from base.base_test import BaseTest
 
 
-class TestExample(BaseTest):
+class TestContacts(BaseTest):
 
     def test_example(self):
-        admin = self.browser_factory()
-        manager = self.browser_factory()
-
-        self.login_page().open()
-        self.login_page().login_as(self.credentials.LOGIN, self.credentials.PASSWORD)
-
-        self.login_page(admin).open()
-        self.login_page().click()
+        self.contacts_page.open()
+        time.sleep(3)
+        self.contacts_page.filters.click_today_filter()
+        time.sleep(3)
